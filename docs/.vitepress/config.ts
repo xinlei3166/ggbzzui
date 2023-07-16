@@ -3,6 +3,8 @@ import {
   demoblockPlugin,
   demoblockVitePlugin,
 } from "vitepress-theme-demoblock";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import Unocss from "../../config/unocss";
 
 export default defineConfig({
   title: "VitePress",
@@ -13,7 +15,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [demoblockVitePlugin()],
+    plugins: [demoblockVitePlugin(), vueJsx(), Unocss()],
   },
 
   themeConfig: {
